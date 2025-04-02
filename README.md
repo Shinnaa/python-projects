@@ -13,7 +13,7 @@ A collection of Python-based projects.
 - **Technologies**: Python, yt-dlp, FFmpeg, tkinter
 - **GitHub Link**: [YouTube Downloader](https://github.com/Shinnaa/python-projects/tree/main/yt-downloader)
 
-### 2. Data Analysis Project
+### 2. Stopwatch
 - **Description**: A data analysis project using Python and Pandas.
 - **Features**:
   - Data cleaning and preprocessing.
