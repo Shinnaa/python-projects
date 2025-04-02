@@ -1,6 +1,5 @@
 # Stopwatch Application
-
-This is a Python-based stopwatch application with a modern GUI built using Tkinter. It features a clean and intuitive interface with circular buttons and hover effects.
+A Python-based stopwatch application with a GUI built using Tkinter.
 
 ## Features
 - **Start/Stop Functionality**: A toggle button to start and stop the timer.
@@ -10,11 +9,9 @@ This is a Python-based stopwatch application with a modern GUI built using Tkint
   - `Spacebar`: Start/Stop the timer.
   - `Enter`: Record a lap.
   - `Backspace`: Reset the timer.
-- **Modern Design**:
-  - Dark theme with vibrant accent colors.
-  - Circular buttons with hover effects for interactivity.
+- **Modern Design**: Circular buttons with hover effects for interactivity.
 
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Shinnaa/python-projects.git
+## Usage
+Run the application:
+```bash
+python app.py
