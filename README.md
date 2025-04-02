@@ -11,7 +11,7 @@ A collection of Python-based projects.
   - Select video quality from available formats.
   - Download audio-only files in MP3 format.
 - **Technologies**: Python, yt-dlp, FFmpeg, tkinter
-- **GitHub Link**: [YouTube Downloader](https://github.com/Shinnaa/python-projects/tree/main/youtube-downloader)
+- **GitHub Link**: [YouTube Downloader](https://github.com/Shinnaa/python-projects/tree/main/yt-downloader)
 
 ### 2. Data Analysis Project
 - **Description**: A data analysis project using Python and Pandas.
