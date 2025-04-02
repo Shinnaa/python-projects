@@ -18,4 +18,4 @@ A collection of Python-based projects showcasing various functionalities, tools,
   - Lap recording with a scrollable list.
   - Reset functionality to clear the timer and laps.
   - Keyboard shortcuts for quick control.
-- **Technologies**: Python, Tkinter
+- **Technologies**: Python, `tkinter`
