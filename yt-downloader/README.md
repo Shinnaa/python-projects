@@ -12,4 +12,5 @@ A Python-based YouTube downloader with video and audio merging using `yt-dlp` an
 ## Usage
 
 1. Run the application:
+   ```bash
    python app.py
