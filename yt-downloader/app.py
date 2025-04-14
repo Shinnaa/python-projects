@@ -5,11 +5,11 @@ from tkinter import filedialog, messagebox, ttk
 def fetch_video_info(url):
     """Fetch video information and available formats."""
     try:
-        print(f"Fetching video info for URL: {url}")  # Debugging print
+        print(f"Fetching video info for URL: {url}")
         ydl_opts = {'quiet': True}
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(url, download=False)
-        print(f"Video info fetched: {info}")  # Debugging print
+        print(f"Video info fetched: {info}") 
         return info
     except yt_dlp.utils.DownloadError as e:
         messagebox.showerror("Error", f"Failed to fetch video info: {e}")
@@ -27,14 +27,14 @@ def fetch_and_display_formats():
 
     info = fetch_video_info(url)
     if not info:
-        print("No video info returned.")  # Debugging print
+        print("No video info returned.") 
         return
 
     # Populate the quality dropdown
     formats = info.get('formats', [])
-    print("Raw formats:", formats)  # Debugging print
+    print("Raw formats:", formats) 
     if not formats:
-        print("No formats found.")  # Debugging print
+        print("No formats found.") 
         messagebox.showerror("Error", "No formats found for this video.")
         return
 
@@ -44,7 +44,7 @@ def fetch_and_display_formats():
         for fmt in formats
     ]
     if not quality_options:
-        print("No video formats available.")  # Debugging print
+        print("No video formats available.")
         messagebox.showerror("Error", "No video formats available.")
         return
 
@@ -53,7 +53,7 @@ def fetch_and_display_formats():
     quality_menu['menu'].delete(0, 'end')
     for option in quality_options:
         quality_menu['menu'].add_command(label=option, command=tk._setit(quality_var, option))
-    print("Formats successfully fetched and displayed.")  # Debugging print
+    print("Formats successfully fetched and displayed.") 
 
 def download_video():
     """Download the selected video quality and merge it with audio."""
@@ -70,7 +70,6 @@ def download_video():
     # Extract format ID from the selected quality
     format_id = selected_quality.split(" | ")[-1]
 
-    # Ask the user for the save location
     save_path = filedialog.askdirectory()
     if not save_path:
         messagebox.showinfo("Cancelled", "Download cancelled.")
@@ -79,8 +78,8 @@ def download_video():
     try:
         ydl_opts = {
             'outtmpl': f'{save_path}/%(title)s.%(ext)s',
-            'format': f"{format_id}+bestaudio",  # Download selected video format + best audio
-            'merge_output_format': 'mp4',  # Ensure the output is in MP4 format
+            'format': f"{format_id}+bestaudio",
+            'merge_output_format': 'mp4', 
         }
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([url])
